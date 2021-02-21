@@ -146,7 +146,9 @@ main{
 }
 
 footer{
+  font-family: Verdana,sans-serif;
   text-align: center;
   font-size: 13px;
   margin-bottom: 10px;
+  color: #333;
 }
