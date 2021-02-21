@@ -136,7 +136,7 @@ main{
   background: lightpink;
   box-shadow: 0 10px 0 rgb(221, 128, 142);
   transform: rotate(360deg);
-  border-radius: 50%;
+  border-radius: 70px 70px 0 70px;
 }
 
 .wrong:active{
