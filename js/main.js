@@ -33,12 +33,12 @@
       
       this.btn.addEventListener('click',() => {
         
-        this.strings = ['Excellent!','Great!','Good!','>_<','*  _  *'];
+        this.strings = ['Excellent!','Great!','Good!','*^_^*','*´◡`*'];
         this.btn.textContent = this.strings[Math.floor(Math.random()*this.strings.length)];
-        if(this.btn.textContent === '>_<'){
+        if(this.btn.textContent === '*^_^*'){
             this.btn.classList.add('correct');
             this.btn.classList.remove('wrong');       
-        } else if(this.btn.textContent === '*  _  *'){
+        } else if(this.btn.textContent === '*´◡`*'){
             this.btn.classList.add('wrong');
             this.btn.classList.remove('correct');
         } else{          
