@@ -53,7 +53,7 @@
     new Panel(),
     new Panel(),
     new Panel(),
-  ]
+  ];
 
   
 }
