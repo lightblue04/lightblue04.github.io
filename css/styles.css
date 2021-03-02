@@ -75,6 +75,7 @@ header img{
   border: 4px solid rgb(159, 216, 105);
   padding: 12px;
   border-radius: 8px;
+  margin-bottom: 20px;
 }
 
 #episode{
@@ -96,15 +97,18 @@ header img{
 #epi1img2{
   display: flex;
   justify-content: space-between;
+  
 }
 
 #epi1img2 img{
   width: 90px;
   height: 90px;
+  margin-bottom: 14px;
 }
 
 #epi1img2 p{
   font-size: 13px;
+  text-align: right;
 }
 
 #game p{
