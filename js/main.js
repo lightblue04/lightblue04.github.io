@@ -23,6 +23,11 @@
 }
 
 {
+  const btnId = document.getElementById('btn');
+  const result = document.getElementById('result');
+  const replay = document.getElementById('replay');
+  const scoreLabel = document.querySelector('#result > p');
+  
   class Panel{
     constructor(){
       this.btn = document.createElement('div');
@@ -33,8 +38,16 @@
       
       this.btn.addEventListener('click',() => {
         
-        this.strings = ['Excellent!','Great!','Good!','*^_^*','*´◡`*'];
-        this.btn.textContent = this.strings[Math.floor(Math.random()*this.strings.length)];
+        this.strings = [
+          {p:'Good!',q:1},
+          {p:'Great!',q:2},
+          {p:'Excellent!',q:3},
+          {p:'*^_^*',q:4},
+          {p:'*´◡`*',q:5}
+        ];
+        this.num = Math.floor(Math.random()*this.strings.length)
+       
+        this.btn.textContent = this.strings[this.num].p;
         if(this.btn.textContent === '*^_^*'){
             this.btn.classList.add('correct');
             this.btn.classList.remove('wrong');       
@@ -45,7 +58,14 @@
             this.btn.classList.remove('correct');
             this.btn.classList.remove('wrong');
         }
+        this.score = this.strings[this.num].q
+        console.log(this.score);
       });
+    }
+    setInitialState(){
+      this.btn.textContent = "";
+      this.btn.classList.remove('correct');
+      this.btn.classList.remove('wrong'); 
     }   
   }
 
@@ -54,6 +74,19 @@
     new Panel(),
     new Panel(),
   ];
+  
+  btnId.addEventListener('click',()=>{
+    result.classList.remove('hidden');
+    scoreLabel.textContent = `Score:${panels[0].score + panels[1].score + panels[2].score} / 15`;
+    // console.log(panels[0].score + panels[1].score + panels[2].score);
+  });
+
+  replay.addEventListener('click',()=>{
+    result.classList.add('hidden');
+    panels.forEach(panel =>{
+      panel.setInitialState();  
+    });
+  });
 
   
 }

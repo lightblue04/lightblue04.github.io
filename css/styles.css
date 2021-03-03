@@ -122,6 +122,7 @@ header img{
 main{
   display: flex;
   justify-content: space-between;
+  position: relative;
 }
 
 .panel,
@@ -175,6 +176,28 @@ main{
   box-shadow: 0 5px 0 rgb(221, 128, 142);
 }
 
+#btn,#replay{
+  width: 200px;
+  height: 40px;
+  background: rgb(250, 224, 111);
+  border-radius: 20px;
+  margin: 30px auto;
+  box-shadow: 0 8px 0 rgb(238, 198, 23);
+  color: #fff;
+  text-align: center;
+  line-height: 40px;
+  font-size: 18px;
+  font-weight: bold;
+  cursor: pointer;
+  user-select: none;
+}
+
+#btn:active{
+  margin-top: 35px;
+  box-shadow: 0 3px 0 rgb(238, 198, 23);
+  margin-bottom: 25px;
+}
+
 footer{
   font-family: Verdana,sans-serif;
   text-align: center;
@@ -182,4 +205,34 @@ footer{
   margin-bottom: 18px;
   color: #333;
   margin-top: 10px;
+}
+
+#result{
+  position: absolute;
+  width: 300px;
+  background: #fff;
+  padding: 30px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  left: 0;
+  right: 0;
+  top:400px;
+  margin: 0 auto;
+  text-align: center;
+  border-radius: 4px;
+  transition: 0.4s;
+}
+
+#result.hidden{
+  transform: translateY(-700px);
+}
+
+#result > p{
+  font-size: 20px;
+}
+
+#replay{
+  display: block;
+  text-decoration: none;
+  height: 30px;
+  line-height: 30px;
 }
