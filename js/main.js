@@ -83,7 +83,7 @@
       result.classList.remove('hidden');
       scoreLabel.textContent = `3つともクリックして下さい`;
     }
-    // console.log(panels[0].score + panels[1].score + panels[2].score);
+    
   });
 
   replay.addEventListener('click',()=>{
