@@ -35,9 +35,8 @@
       
       const main = document.querySelector('main');
       main.appendChild(this.btn);
-      
+       
       this.btn.addEventListener('click',() => {
-        
         this.strings = [
           {p:'Good!',q:1},
           {p:'Great!',q:2},
@@ -59,13 +58,14 @@
             this.btn.classList.remove('wrong');
         }
         this.score = this.strings[this.num].q
-        console.log(this.score);
+        // console.log(this.score);
       });
     }
     setInitialState(){
-      this.btn.textContent = "";
+      this.btn.textContent ='';
+      this.score = 0;
       this.btn.classList.remove('correct');
-      this.btn.classList.remove('wrong'); 
+      this.btn.classList.remove('wrong');    
     }   
   }
 
@@ -76,8 +76,13 @@
   ];
   
   btnId.addEventListener('click',()=>{
-    result.classList.remove('hidden');
-    scoreLabel.textContent = `Score:${panels[0].score + panels[1].score + panels[2].score} / 15`;
+    if (panels[0].score > 0 && panels[1].score > 0 && panels[2].score > 0){
+      result.classList.remove('hidden');
+      scoreLabel.textContent = `Score:${panels[0].score + panels[1].score + panels[2].score} / 15`;
+    } else {
+      result.classList.remove('hidden');
+      scoreLabel.textContent = `3つともクリックして下さい`;
+    }
     // console.log(panels[0].score + panels[1].score + panels[2].score);
   });
 
