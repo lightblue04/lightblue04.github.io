@@ -236,3 +236,7 @@ footer{
   height: 30px;
   line-height: 30px;
 }
+
+.inactive{
+  opacity: 0.6;
+}

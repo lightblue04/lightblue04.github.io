@@ -37,6 +37,10 @@
       main.appendChild(this.btn);
        
       this.btn.addEventListener('click',() => {
+        if (this.btn.classList.contains('inactive')){
+          return;
+        }
+        this.btn.classList.add('inactive');
         this.strings = [
           {p:'Good!',q:1},
           {p:'Great!',q:2},
@@ -65,7 +69,8 @@
       this.btn.textContent ='';
       this.score = 0;
       this.btn.classList.remove('correct');
-      this.btn.classList.remove('wrong');    
+      this.btn.classList.remove('wrong');
+      this.btn.classList.remove('inactive');    
     }   
   }
 
@@ -74,6 +79,7 @@
     new Panel(),
     new Panel(),
   ];
+
   
   btnId.addEventListener('click',()=>{
     if (panels[0].score > 0 && panels[1].score > 0 && panels[2].score > 0){
@@ -83,6 +89,7 @@
       result.classList.remove('hidden');
       scoreLabel.textContent = `3つともクリックして下さい`;
     }
+    console.log(panels[0].score);
     
   });
 
