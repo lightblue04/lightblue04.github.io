@@ -49,6 +49,7 @@ header img{
   color: #333;
   text-decoration: none;
   margin-bottom: 40px;
+  user-select: none;
 }
 
 .menu li a.active{
