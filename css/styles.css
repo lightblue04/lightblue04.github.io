@@ -112,6 +112,18 @@ header img{
   text-align: right;
 }
 
+#epi2img1{
+  display: flex;
+  justify-content: space-around;
+  vertical-align: middle;
+  margin-bottom: 30px;
+}
+
+#epi2img1 img{
+  width: 150px;
+  height: 100px;
+}
+
 #game p{
   margin-top: 30px;
   text-align: center;
