@@ -26,7 +26,7 @@ header img{
 
 .container{
   margin: 30px auto;
-  width: 500px;
+  width: 700px;
   font-size: 16px;
 }
 
@@ -67,12 +67,16 @@ header img{
 }
 
 #about{
+  width: 470px;
+  margin: 0 auto;
   border: 4px solid rgb(159, 216, 105);
-  padding: 12px;
+  padding: 15px;
   border-radius: 8px;
 }
 
 #profile{
+  width: 600px;
+  margin: 0 auto;
   border: 4px solid rgb(159, 216, 105);
   padding: 12px;
   border-radius: 8px;
@@ -89,6 +93,7 @@ header img{
   display: flex;
   justify-content: space-around;
   vertical-align: middle;
+  margin-bottom: 30px;
 }
 
 #epi1img1 img{
@@ -98,13 +103,14 @@ header img{
 
 #epi1img2{
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   
 }
 
 #epi1img2 img{
   width: 90px;
   height: 90px;
+  margin-right: 20px;
   margin-bottom: 14px;
 }
 
