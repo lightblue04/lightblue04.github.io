@@ -96,6 +96,10 @@ header img{
   margin-bottom: 30px;
 }
 
+#profile > article{
+  margin: 0 20px;
+}
+
 #epi1img1 img{
   width: 120px;
   height: 160px;
@@ -139,6 +143,7 @@ header img{
 }
 
 main{
+  margin: 0 60px;
   display: flex;
   justify-content: space-between;
   position: relative;
