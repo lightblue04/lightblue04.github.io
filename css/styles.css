@@ -135,7 +135,8 @@ header img{
   height: 100px;
 }
 
-#game p{
+#game p,
+#rpa p{
   margin-top: 30px;
   text-align: center;
   margin-bottom: 0;
@@ -200,7 +201,8 @@ main{
   box-shadow: 0 5px 0 rgb(221, 128, 142);
 }
 
-#btn,#replay{
+#btn,
+#replay{
   width: 200px;
   height: 40px;
   background: rgb(250, 224, 111);
@@ -263,4 +265,84 @@ footer{
 
 .inactive{
   opacity: 0.6;
+}
+
+#control1,
+#control2,
+#control3,
+#control4{
+  font-size: 14px;
+  margin: 30px;
+  width: 600px;
+  display: flex;
+  /* justify-content: space-between; */
+}
+
+.controllabel{
+  padding: 0;
+  margin: 0;
+  margin-right: 10px;
+  width: 130px;
+  text-align: right;
+}
+
+#control3input{
+  display: flex;
+  width: 470px;
+}
+
+#control4input{
+  display: flex;
+  justify-content: flex-start;
+  width: 450px;
+}
+
+#control4input > input{
+  width: 40px;
+  margin-left: 20px;
+  text-align: left;
+}
+
+table{
+  margin: 50px auto;
+  border: 2px solid  rgb(130, 177, 85);
+  border-collapse: collapse;
+}
+
+thead{
+  background: rgb(130, 177, 85);
+  color: #fff;
+}
+
+th,td{
+  width: 130px;
+  height: 30px;
+  text-align: center;
+  line-height: 30px;
+}
+
+#addbtn,
+#resetcontrol{
+  width: 140px;
+  height: 30px;
+  background: rgb(250, 224, 111);
+  border-radius: 10px;
+  margin: 0 auto;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  box-shadow: 0 5px 0 rgb(238, 198, 23);
+  color: #fff;
+  text-align: center;
+  line-height: 30px;
+  font-size: 14px;
+  /* font-weight: bold; */
+  cursor: pointer;
+  user-select: none;
+}
+
+#addbtn:active,
+#resetcontrol:active{
+  opacity: 0.7;
+  box-shadow: 0 2px 0 rgb(238, 198, 23);
+  /* margin-bottom: 17px; */
 }

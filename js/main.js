@@ -99,6 +99,58 @@
       panel.setInitialState();  
     });
   });
+}
 
-  
+{
+  document.getElementById('addbtn').addEventListener('click',()=>{
+
+    // Company テキストボックス
+    const tdcom = document.getElementById('tdcom');
+    const textcom = document.querySelector('#control1 > input');
+    tdcom.textContent = textcom.value;
+    textcom.value = '';
+
+
+    // Prefecture プルダウンメニュー
+    const tdpre = document.getElementById('tdpre');
+    const textpre = document.querySelector('#control2 > select');
+    tdpre.textContent = textpre.value;
+    
+
+    // Customer ラジオボタン
+    const customers = document.querySelectorAll('#control3input > input');
+    let selectedCustomer;
+    customers.forEach(customer =>{
+      if(customer.checked === true){
+        selectedCustomer = customer.value;
+      }
+    });
+    const tdcus = document.getElementById('tdcus');
+    tdcus.textContent = selectedCustomer;
+    customers.forEach(customer =>{
+      if(customer.checked === true){
+        customer.checked = false;        
+      }
+    });
+
+
+    // System type チェックボックス
+    const types = document.querySelectorAll('#control4input > input');
+    const selectedTypes = [];
+    types.forEach(type =>{
+      if(type.checked === true){
+        selectedTypes.push(type.value);
+      }
+    });
+    const tdsys = document.getElementById('tdsys');
+    tdsys.textContent = selectedTypes;
+    types.forEach(type =>{
+      if(type.checked === true){
+        type.checked = false;        
+      }
+    });
+  });
+
+
+
 }

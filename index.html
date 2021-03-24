@@ -24,6 +24,7 @@
         <li><a href="#" class="active" data-id="about">サイトの概要</a></li>
         <li><a href="#" data-id="intro">Episode</a></li>
         <li><a href="#" data-id="game">Game</a></li>
+        <li><a href="#" data-id="rpa">For RPA</a></li>
       </ul>
     
     <section class="content active" id="about">
@@ -98,7 +99,72 @@
         <div id="replay">Replay?</div>
       </section>
     </section>
-    <!-- </div> -->
+
+    <section class="content" id="rpa">
+      <p>このページは RPAのシナリオ作成の練習のためのページです。<br>Excelのデータを Power Automate Desktop や UiPathを用いて<br>Webアプリケーション上の所定の箇所に自動入力することを想定しています。</p>
+      
+      <!-- Company -->
+        <div id="control1">
+          <div class="controllabel" id="btnname">Company：</div>
+          <input type="text">
+        </div>
+
+      <!-- Prefecture -->
+        <div id="control2">
+          <div class="controllabel" id="btnname2">Prefecture：</div>
+          <select >
+            <option>Tokyo</option>
+            <option>Kanagawa</option>
+            <option>Saitama</option>
+            <option>Chiba</option>
+            <option>Yamanashi</option>
+            <option>Tochigi</option>
+            <option>Ibaraki</option>
+            <option>Gunma</option>
+          </select>  
+        </div>
+
+        <!-- Customer -->
+        <div id="control3">
+          <div  class="controllabel" id="btnname">Customer：</div>
+          <div id="control3input">
+            <input type="radio" name="customer" value="Existing customer">Existing customer
+            <input type="radio" name="customer" value="New customer">New customer
+            <input type="radio" name="customer" value="Customers under consideration">Customers under consideration
+          </div>
+        </div>
+
+        <!-- System type -->
+        <div id="control4">
+          <div class="controllabel" id="btnname">System type：</div>
+          <div id="control4input">
+            <input type="checkbox" value="type1">type1
+            <input type="checkbox" value="type2">type2
+            <input type="checkbox" value="type3">type3
+          </div>
+        </div>
+
+        <!-- Add button -->
+        <div id="addbtn">Add</div>
+        
+        <!-- table -->
+        <table>
+          <thead>
+            <tr><th>Company</th><th>Prefecture</th><th>Customer</th><th>System type</th></tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td id="tdcom"></td>
+              <td id="tdpre"></td>
+              <td id="tdcus"></td>
+              <td id="tdsys"></td>
+            </tr>
+          </tbody>
+        </table>
+          
+        <!-- <div id="resetcontrol">Add data</div> -->
+          
+    </section>
 
     <footer>
       <!-- <p><a href="#top">先頭へ戻る</a></p> -->
